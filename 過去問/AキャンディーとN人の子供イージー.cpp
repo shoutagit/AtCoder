@@ -3,5 +3,11 @@ using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
 int main(){
-    
+    int a, ans;
+    cin >> a;
+    ans = (1 + a) * a / 2;
+    cout << ans << endl;
+
+
+
 }
