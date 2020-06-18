@@ -7,5 +7,8 @@ using ll = long long;
 
 
 int main(){
+    string s, t;
+    cin >> s >> t;
+    
 
 }
