@@ -56,3 +56,6 @@ for(int i=2; i<maxi; i++){
     if(!is_prime[i]) continue;
     for(int j=i*2; j<maxi; j+=i) is_prime[j]=0;
 }
+
+//アルファベット
+string alp="abcdefghijklmnopqrstuvwxyz";
