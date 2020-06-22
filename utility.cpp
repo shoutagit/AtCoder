@@ -59,3 +59,5 @@ for(int i=2; i<maxi; i++){
 
 //アルファベット
 string alp="abcdefghijklmnopqrstuvwxyz";
+
+
