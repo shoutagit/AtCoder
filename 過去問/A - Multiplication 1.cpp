@@ -9,8 +9,9 @@ const ll INF = 1LL << 60;
 
 
 int main(){
-
-
+   ll a, b;
+   cin >> a >> b;
+   cout << a*b << endl;
    
 
 }
