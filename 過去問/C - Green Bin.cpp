@@ -9,13 +9,20 @@ const ll INF = 1LL << 60;
 int main(){
     int n;
     cin >> n;
-    vector<string> ss(n);
-    int ans=0;
+    //同じものの個数を数えるときはvectorではなくmapにする
+    //vectorにすると同じもののペアを探す際にn^2かかってTLEになる
+    map<string,int> mp;
     for(int i=0; i<n; i++){
         string s;
         cin >> s;
         sort(all(s));
-        ss[i] == s;
+        mp[s] ++;
     }
+    ll ans=0;
+    for(auto &x:mp){
+        int a = x.second;
+        ans +=(ll)a*(a-1)/2;
+    }
+    cout << ans << endl;
 
 }
