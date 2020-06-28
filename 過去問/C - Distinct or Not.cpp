@@ -13,7 +13,7 @@ int main(){
     for(int i=0; i<n; i++){
         int a;
         cin >> a;
-        mp[a] ++;
+        mp[a]+=1;
         if(mp[a] > 1){
             cout << "NO" << endl;
             return 0;
