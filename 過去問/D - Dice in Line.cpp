@@ -14,25 +14,23 @@ double expect(int x){
 int main(){
     int n, k;
     cin >> n >> k;
-    vector<double> e(n);
-
-    //期待値計算
-    rep(i,n){
-        int p;
-        cin >> p;
-        e[i] = expect(p);
-    } 
+    vector<int> p(n);
+    rep(i,n) cin >> p[i];
 
     //累積和
-    vector<double> cumsum(n+1);
-    cumsum[0]=0;
+    vector<double> sum(n+1);
+    sum[0]=0;
     for(int i=0; i<n; i++){
-        cumsum[i+1] = cumsum[i] + e[i];
+        if(p[i]%2==0){
+            sum[i+1] = sum[i] +p[i]/2 +0.5;
+        }
+        else if(p[i]%2==1){
+            sum[i+1] = sum[i] +p[i]/2 + 1;
+        }
     }
-
     double ans=0;
-    for(int i=k+1; i<=n; i++){
-        double temp=cumsum[i] - cumsum[i-k];
+    for(int i=0; i<n-k+1; i++){
+        double temp=sum[i+k]-sum[i];
         ans = max(ans,temp);
     }
 
